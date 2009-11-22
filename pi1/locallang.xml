@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_ptgsacategories_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="ARTNR">Article number</label>
+			<label index="MATCH">Search term</label>
+			<label index="MATCH2">Description</label>
+		</languageKey>
+
+		<languageKey index="de" type="array">
+			<label index="ARTNR">Artikelnummer</label>
+			<label index="MATCH">Suchbegriff</label>
+			<label index="MATCH2">Beschreibung</label>
+		</languageKey>
+	</data>
+</T3locallang>

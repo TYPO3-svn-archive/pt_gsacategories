@@ -1,0 +1,15 @@
+config.tx_ptgsacategories {
+
+	# PID or alias where to store category data (tx_ptgsacategories_cat, tx_ptgsacategories_cat_art_rel, tx_ptgsacategories_cat_cat_rel) 
+	storagePid = categorystorage
+
+	# configuration for additional markers in the articlebox tx_ptgsashop_pi2 (and so for the tx_ptgsaarticlelist_pi1, too)
+	articleBox {
+		# linkParameterName < plugin.tx_ptgsacategories_pi1.parameterName
+		linkParameterName = tx_ptgsacategories|cat_uid
+		categoryLink {
+			parameter = {$plugin.tx_ptgsacategories.categoryListViewPid}
+		}
+	}
+	
+}

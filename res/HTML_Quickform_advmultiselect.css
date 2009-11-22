@@ -1,0 +1,37 @@
+#amsSelected {
+	background-color: #fff;
+	overflow: auto;
+	height: 20em;
+	width: 100%;
+	border: 1px solid #404040;
+}
+
+#amsSelected label {
+	padding: 1px;
+	display: block;
+}
+
+#amsSelected input {
+	margin-right: 3px;
+}
+
+.points {
+	color:#aaa;
+}
+
+
+td.ams_selected, td.ams_unselected {
+	width: 50%;
+}
+
+.tx_ptgsacategories_selected {
+	font-weight:bold;
+}
+
+.tx_ptgsacategories_notselected {
+	color:#aaa;
+}
+
+.tx_ptgsacategories_categories {
+	margin-bottom:20px;
+}

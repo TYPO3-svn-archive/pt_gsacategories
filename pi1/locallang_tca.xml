@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_ptgsaarticlelist_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="sGeneral">General Options</label>
+			<label index="rootNodes">Root nodes</label>
+			<label index="hideFirstLevel">Hide first level of nodes</label>
+			<label index="templateFile">Template File</label>
+			<label index="notset"></label>
+			<label index="yes">Yes</label>
+			<label index="no">No</label>
+			<label index="pluginMode">Mode</label>
+			<label index="tree">Tree menu</label>
+			<label index="breadcrumb">Breadcrumb menu</label>
+		</languageKey>
+	</data>
+</T3locallang>

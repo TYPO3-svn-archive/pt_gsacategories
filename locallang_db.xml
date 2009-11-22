@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'pt_gsacategories'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.list_type_pi1">GSA Categories: Category Menu</label>
+			<label index="tx_ptgsacategories_cat">Categories</label>
+			<label index="tx_ptgsacategories_cat.title">Title</label>
+			<label index="tx_ptgsacategories_cat.description">Description</label>
+			<label index="tx_ptgsacategories_cat.image">Image</label>
+			<label index="tx_ptgsacategories_cat.childcats">Child categories</label>
+			<label index="tx_ptgsacategories_cat.parentcats">Parent categories</label>
+			<label index="tx_ptgsacategories_cat.articles">Articles</label>
+			<label index="tx_ptgsacategories_cat.invisible">Invisible</label>
+			<label index="tx_ptgsacategories_cat_art_rel">Categories Article Relations</label>
+			<label index="tx_ptgsacategories_cat_art_rel.cat_uid">Category uid</label>
+			<label index="tx_ptgsacategories_cat_art_rel.art_uid">Article uid</label>
+			<label index="tx_ptgsacategories_cat_art_rel.cat_sort">Category sort field</label>
+			<label index="tx_ptgsacategories_cat_art_rel.art_sort">Article sort field</label>
+			<label index="tx_ptgsacategories_cat_cat_rel">Categorie Relations</label>
+			<label index="tx_ptgsacategories_cat_cat_rel.parentcat_uid">Parent category</label>
+			<label index="tx_ptgsacategories_cat_cat_rel.childcat_uid">Child category</label>
+			<label index="tx_ptgsacategories_cat_cat_rel.parentcat_sort">Parent category sort field</label>
+			<label index="tx_ptgsacategories_cat_cat_rel.childcat_sort">Child category sort field</label>
+			<label index="labelDataProvider">Category Listing (pt_gsacategories)</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tt_content.list_type_pi1">GSA Kategorien: Kategoriemenü</label>
+			<label index="tx_ptgsacategories_cat">Kategorien</label>
+			<label index="tx_ptgsacategories_cat.title">Titel</label>
+			<label index="tx_ptgsacategories_cat.description">Beschreibung</label>
+			<label index="tx_ptgsacategories_cat.image">Bild</label>
+			<label index="tx_ptgsacategories_cat.childcats">Kindkategorien</label>
+			<label index="tx_ptgsacategories_cat.parentcats">Elternkategorien</label>
+			<label index="tx_ptgsacategories_cat.articles">Artikel</label>
+			<label index="tx_ptgsacategories_cat.invisible">Unsichtbar</label>
+			<label index="tx_ptgsacategories_cat_art_rel">Kategorien-Artikel-Beziehungen</label>
+			<label index="tx_ptgsacategories_cat_art_rel.cat_uid">Kategorie uid</label>
+			<label index="tx_ptgsacategories_cat_art_rel.art_uid">Artikel uid</label>
+			<label index="tx_ptgsacategories_cat_art_rel.cat_sort">Kategorie Sortierfeld</label>
+			<label index="tx_ptgsacategories_cat_art_rel.art_sort">Artikel Sortierfeld</label>
+			<label index="tx_ptgsacategories_cat_cat_rel">Kategorie Relationen</label>
+			<label index="tx_ptgsacategories_cat_cat_rel.parentcat_uid">Elternkategorie</label>
+			<label index="tx_ptgsacategories_cat_cat_rel.childcat_uid">Kindkategorie</label>
+			<label index="tx_ptgsacategories_cat_cat_rel.parentcat_sort">Elternkategorie Sortierfeld</label>
+			<label index="tx_ptgsacategories_cat_cat_rel.childcat_sort">Kindkategorie Sortierfeld</label>			
+			<label index="labelDataProvider">Kategorie Liste (pt_gsacategories)</label>
+		</languageKey>
+	</data>
+</T3locallang>

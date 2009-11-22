@@ -1,0 +1,46 @@
+ChangeLog
+=========
+
++ (ry44)
+  + Von Templates auf Typoscript Wraps umgestiegen
+  + Templates gelöscht
++ (ry44)
+  + static typoscript: 
+    + plugin.tx_ptgsaarticlelist_pi1.catDataProvider.defaultCategory
+    + plugin.tx_ptgsacategories_pi1.firstlevel
+    + plugin.tx_ptgsacategories_pi1.lastLevel 
++ (ry44) PHPDoc Kommentare ergänzen
++ (ry44) Sprachhandling umgestellt. 
+  + Die Labels fürs Frontend kommen jetzt nicht aus einer eigenen locallang.xml,
+    sondern aus plugin.tx_ptgsaarticlelist_pi1._LOCAL_LANG und werden über this->pObj->pi_getLL() angesprochen
+    siehe auch manual.sxw von pt_gsaarticlelist
+  + Das label für das pt_gsaarticlelist flexform kommt jetzt aus locallang_db.xml
+  + res/hooks/locallang.xml gelöscht
++ (ry44) plugin.tx_ptgsaarticlelist_pi1.catDataProvider.orderBy = ARTNR statt "NUMMER"
++ (ry44) sortmenu aus static template rausgenommen und in res/samples verschoben
++ (ry44) Bug: erste leere Kategorie wird trotzdem leer gerendert wenn hideFirstNode = 1
++ (ry44) breadcrumb menu hinzugefügt
++ (ry44) fallback mechanismus bei parameterName (zB cat_uid // filter)
++ (ry44) linkParameterName hinzugefügt. Wenn leer, dann nimmt er das erste von parameterName
++ (ry44) fehlende enableFields hinzugefügt
++ (ry44) Feld "invisible" hinzugefügt
+
+
+TODO
+====
+
+
+
+
+
+Ideen
+=====
+- Eigenes Interface für Kategorien mit Baumansicht
+
+Stichpunkte Manual
+==================
+- Breadcrumbmenu (siehe VTH)
+- Verschachtelte catmenues
+- Labels überschreiben
+- Anlegen und Pflegen von Kategorien
+- Konzepte Baum/Graph

@@ -1,0 +1,103 @@
+# example for an "order by" menu -----------------------------------------------
+plugin.tx_ptgsaarticlelist_pi1.catDataProvider.orderBy.data = GPVar:tx_ptgsacategories_pi1|sortorder
+
+
+# embed this with the extension tscobj ----------------------------------------
+lib.tx_ptgsacategories_pi1.sortmenu = COA
+lib.tx_ptgsacategories_pi1.sortmenu {
+
+	wrap = <ul class="sortmenu">|</ul>
+	
+	10 = TEXT
+	10 {
+		data = LLL:EXT:pt_gsacategories/pi1/locallang.xml:ARTNR
+		typolink {
+      		parameter.dataWrap = {page:uid}#tx_ptgsaarticlelist_pi1_headline
+      		additionalParams.dataWrap = &tx_ptgsacategories_pi1[cat_uid]={GPVar:tx_ptgsacategories_pi1|cat_uid}&tx_ptgsacategories_pi1[sortorder]=ARTNR
+  		}
+  		wrap = <li>|</li>
+	}
+	
+	20 = TEXT
+	20 {
+		data = LLL:EXT:pt_gsacategories/pi1/locallang.xml:MATCH
+		typolink {
+      		parameter.dataWrap = {page:uid}#tx_ptgsaarticlelist_pi1_headline
+      		additionalParams.dataWrap = &tx_ptgsacategories_pi1[cat_uid]={GPVar:tx_ptgsacategories_pi1|cat_uid}&tx_ptgsacategories_pi1[sortorder]=MATCH
+  		}
+  		wrap = <li>|</li>
+	}
+	
+	30 = TEXT
+	30 {
+		data = LLL:EXT:pt_gsacategories/pi1/locallang.xml:MATCH2
+		typolink {
+      		parameter.dataWrap = {page:uid}#tx_ptgsaarticlelist_pi1_headline
+      		additionalParams.dataWrap = &tx_ptgsacategories_pi1[cat_uid]={GPVar:tx_ptgsacategories_pi1|cat_uid}&tx_ptgsacategories_pi1[sortorder]=MATCH2
+  		}
+  		wrap = <li>|</li>
+	}
+	
+}
+
+
+
+# only for testing: drop down menu (not working until now) (ry44) --------------
+lib.tx_ptgsacategories_pi1.sortmenuDropdown = COA
+lib.tx_ptgsacategories_pi1.sortmenuDropdown {
+	stdWrap.wrap = <div><form action="index.php?id={page:uid}" method="POST" name="sortmenuDropdown"><select name="tx_ptgsacategories_pi1[sortorder]" size="1" onChange="document.forms['sortmenuDropdown'].submit()"> | </select></form></div>
+	stdWrap.insertData = 1
+	
+	10 = TEXT
+	10 {
+		data = LLL:EXT:pt_gsacategories/pi1/locallang.xml:NUMMER
+  		wrap = <option value="NUMMER">|</option>
+	}
+	
+	20 = TEXT
+	20 {
+		data = LLL:EXT:pt_gsacategories/pi1/locallang.xml:MATCH
+  		wrap = <option value="MATCH">|</option>
+	}
+	
+	30 = TEXT
+	30 {
+		data = LLL:EXT:pt_gsacategories/pi1/locallang.xml:MATCH2
+  		wrap = <option value="MATCH2">|</option>
+	}
+
+}
+
+
+
+
+temp.dropdown_navi = COA
+temp.dropdown_navi {
+  10 = HMENU
+  10 {
+     special = directory
+     special.value = 123
+     ### Selectbox mit JavaScript-Event fuer Sprung zur Zielseite
+     wrap = <div><select name="dropdown_navi" size="1" onChange="document.location.href='index.php?id=' + this.value"> | </select></div>
+
+     1 = TMENU
+     1 {
+       expAll = 1
+       noBlur = 1
+       NO {
+         ### 'value' ist ID der gelisteten Seite (wird an Sprungziel oben gehaengt)
+         stdWrap.dataWrap = <option value="{field:uid}">
+         allWrap = | </option>
+         ### Eintraege in Liste nicht verlinken
+         doNotLinkIt = 1
+       }
+       CUR = 1
+       CUR {
+         ### wenn aktuelle Seite (CUR), dann als 'selected' markieren
+         stdWrap.dataWrap = <option value="{field:uid}" selected="selected">
+         allWrap = | </option>
+         doNotLinkIt = 1
+       }
+     }
+  }
+}

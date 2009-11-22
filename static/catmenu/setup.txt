@@ -1,0 +1,101 @@
+plugin.tx_ptgsacategories_pi1 {
+
+	# typolink configuration for category link
+	typolink {
+		parameter.dataWrap = {page:uid}#tx_ptgsaarticlelist_pi1_headline
+	}
+	
+	# typolink configuration for article link (if in pluginMode "breadcrumbarticle")
+	typolinkArticle {
+		parameter.dataWrap = {page:uid}
+	}
+	
+	# path to the template file
+	templateFile = EXT:pt_gsacategories/res/menu.tpl.html
+	
+	# insert a comma separated list of rood nodes
+	rootNodes = 
+	
+	# shall the nodes of the first level be displayed in the category menu?
+	hideFirstLevel = 1
+	
+	# level to start with 
+	firstLevel = 0
+	
+	# last level to be displayed (empty for no limit) 
+	lastLevel = 
+	
+	# Global switch for rendering subs (1 = render all subcategories)
+	renderSubs = 0
+	
+	# How many levels of subs should be rendered? (meaningless if renderSubs = 1)
+	maxSubLevel = 1
+	
+	# Which level of categories is sub level? (meaningless if renderSubs = 1)
+	startSubsOn = 2
+	
+	# If set to 1, sub categories are rendered only for selected categories (meaningless if renderSubs = 1)
+	renderOnlySelectedSubs = 1
+	
+	# parameter name, use "//" for fallback parameters
+	parameterName = tx_ptgsacategories|cat_uid
+	
+	# parameter name for outgoing category links, if empty "parameterName" will be used
+	linkParameterName =
+	
+	# parameter name for outgoing article links (if in pluginMode "breadcrumbarticle"), if empty "parameterName" will be used
+	linkArticleParameterName =  
+	
+	# last item (category, or article if pluginMode "breadcrumbarticle") will not be linked, only available in pluginModes "breadcrumb" and "breadcrumbarticle"
+	doNotLinkLastItem = 1
+	
+	# stdWrap that will be applied on category links title
+	title_stdWrap {
+	}
+	
+	# stdWrap that will be applied on article link title (if in pluginMode "breadcrumbarticle")
+	titleArticle_stdWrap {
+	}
+	
+	# plugin mode "breadcrumb", "breadcrumbarticle", "default"
+	pluginMode = default
+
+	# article title template (if in pluginMode "breadcrumbarticle")
+	articleTitleTemplate = ###MATCH1### (Art.-Nr.: ###ARTNO###)
+	
+	# do not wrap the plugin output with comment and div (e.g. when using in title tag)
+	doNotWrapInBaseClass = 0
+	
+	# add parameters for categories in path (for search-engine friendly urls with cooluri or realurl)
+	addParametersForPath = 1
+	
+	# jeweils vom typ wrap + optionSplit
+	# wrapAll = <div class="tx-ptgsacategories-pi1">|</div>
+	wrapLevel = <ul class="tx-ptgsacategories-pi1-level###LEVEL###">|</ul>
+	wrapItemAndSub = <li class="tx-ptgsacategories-pi1-itemandsub###LEVEL###">|</li>
+	wrapItem = <span class="tx-ptgsacategories-pi1-item###LEVEL### tx-ptgsacategories-pi1-first">|</span> |*| <span class="tx-ptgsacategories-pi1-item###LEVEL### tx-ptgsacategories-pi1-middle">|</span> |*| <span class="tx-ptgsacategories-pi1-item###LEVEL### tx-ptgsacategories-pi1-last">|</span>
+	wrapActiveItem = <span class="tx-ptgsacategories-pi1-item###LEVEL### tx-ptgsacategories-pi1-first tx-ptgsacategories-pi1-active">|</span> |*| <span class="tx-ptgsacategories-pi1-item###LEVEL### tx-ptgsacategories-pi1-middle tx-ptgsacategories-pi1-active">|</span> |*| <span class="tx-ptgsacategories-pi1-item###LEVEL### tx-ptgsacategories-pi1-last tx-ptgsacategories-pi1-active">|</span>
+	
+	wrapBreadCrumbAll = <ul class="tx-ptgsacategories-breadcrumbmenu">|</ul>
+	wrapBreadCrumbItem = <li class="tx-ptgsacategories-breadcrumbitem tx-ptgsacategories-pi1-item###LEVEL### tx-ptgsacategories-pi1-first">&nbsp;/&nbsp;|</li> |*| <li class="tx-ptgsacategories-breadcrumbitem tx-ptgsacategories-pi1-item###LEVEL### tx-ptgsacategories-pi1-middle">&nbsp;/&nbsp;|</li> |*| <li class="tx-ptgsacategories-breadcrumbitem tx-ptgsacategories-pi1-item###LEVEL### tx-ptgsacategories-pi1-last">&nbsp;/&nbsp;|</li>
+	
+	_CSS_DEFAULT_STYLE (
+		ul { margin: 0 0 0 10px; padding: 0px; }
+		li { list-style-type: none; padding: 0px; margin:0px; }
+		ul.level0 li { }
+		ul.level1 li { }
+		ul.level2 li { }
+		
+		.tx-ptgsacategories-pi1-active { font-weight:bold; }
+		.tx-ptgsacategories-pi1-active:before { content: "> "; }
+		.tx-ptgsacategories-pi1-active:after { content:" <"; }
+		
+		.tx-ptgsacategories-pi1-first a { color: blue; }
+		.tx-ptgsacategories-pi1-middle a { color: red; }
+		.tx-ptgsacategories-pi1-last a { color: green; }
+		
+		ul.tx-ptgsacategories-breadcrumbmenu { display: inline; margin: 0px; }
+		li.tx-ptgsacategories-breadcrumbitem { display: inline; }
+	)
+	
+}

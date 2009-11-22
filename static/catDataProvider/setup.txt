@@ -1,0 +1,34 @@
+plugin.tx_ptgsaarticlelist_pi1 {
+
+    catDataProvider {
+        
+        # shows article in the selected category and its subcategories
+        showSubCategoryContent = 1
+        
+        # sort order
+        orderBy = ARTNR
+        
+        # hide passive articles
+        hidePassiveArticles = 1
+        
+        # uid of default category (if noone is selected)
+		defaultCategory =
+		
+		# name of the parameter the list should react to, be sure to have this name configured in plugin.tx_ptgsacategories_pi1.parameterName too (if you don't know better)
+		parameterName = tx_ptgsacategories|cat_uid
+    }
+    
+    _LOCAL_LANG {
+		default {
+			catDataProvider_noCategorySelected = No category selected
+			catDataProvider_ArticlesInCategory = Articles in category "%s"
+			catDataProvider_ArticlesInCategoryAndSubcategories = Articles in category "%s" and its subcategories
+		}
+		
+		de {
+			catDataProvider_noCategorySelected = Keine Kategorie ausgewählt
+			catDataProvider_ArticlesInCategory = Artikel der Kategorie "%s"
+			catDataProvider_ArticlesInCategoryAndSubcategories = Artikel der Kategorie "%s" und ihren Unterkategorien
+		}
+	}
+}
