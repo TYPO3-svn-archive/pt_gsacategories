@@ -44,7 +44,9 @@ CREATE TABLE tx_ptgsacategories_cat_art_rel (
 	art_sort int(11) DEFAULT '0' NOT NULL,
 	
 	PRIMARY KEY (uid),
-	KEY parent (pid)
+	KEY parent (pid),
+	KEY cat_uid (cat_uid),
+	KEY art_uid (art_uid)
 );
 
 
@@ -68,5 +70,7 @@ CREATE TABLE tx_ptgsacategories_cat_cat_rel (
 	childcat_sort int(11) DEFAULT '0' NOT NULL,
 	
 	PRIMARY KEY (uid),
-	KEY parent (pid)
+	KEY parent (pid),
+	KEY parentcat_uid (parentcat_uid),
+	KEY childcat_uid (childcat_uid)
 );
